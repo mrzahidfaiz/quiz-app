@@ -7,7 +7,7 @@ const Home = async () => {
     const difficulty = 'easy';
 
     const getQuestions = async (QuestionLimit, difficulty) => {
-        const response = await fetch(`https://opentdb.com/api.php?amount=${QuestionLimit}&difficulty=${difficulty}&type=multiple`)
+        const response = await fetch(`https://opentdb.com/api.php?amount=${QuestionLimit}&difficulty=${difficulty}&type=multiple&category=9`)
         const Questions = await response.json();
         return Questions.results.map((question) => ({
             ...question,
