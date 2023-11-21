@@ -25,7 +25,7 @@ const QuestionCard = (props) => {
                     answers.map((answer, index) => {
                         return <div
                             key={answer}
-                            className={`${getBGColor(userAnswer, correct_answer, answer)} w-full flex flex-col justify-center items-center p-1.5 bg-gray-400 hover:bg-gray-800 hover:cursor-pointer rounded-md shadow-md hover:text-white`}
+                            className={`${getBGColor(userAnswer, correct_answer, answer)} w-full flex flex-col justify-center items-center p-1.5 bg-gray-400 hover:cursor-pointer rounded-md shadow-md hover:text-white`}
                             onClick={() => onClik(answer, index)}>
                             <p className='truncate' dangerouslySetInnerHTML={{ __html: answer }} />
                         </div>
